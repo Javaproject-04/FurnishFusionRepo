@@ -6,6 +6,7 @@ No external AI/ML libraries - rule-based detection only.
 
 import re
 from db import get_db
+from typing import Optional
 
 # ---------------------------------------------------------------------------
 # Budget split rules: room_type -> { category_name: percentage }
@@ -44,7 +45,7 @@ CATEGORY_KEYWORDS = {
 }
 
 
-def detect_budget(text: str) -> float | None:
+def detect_budget(text: str) -> Optional[float]:
     """
     Extract budget amount from user input.
     Handles formats like: 50000, 50,000, 50k, 50 thousand, Rs 50000, ₹50000.
