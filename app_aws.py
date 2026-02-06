@@ -39,7 +39,7 @@ app.config["ORDERS_TABLE"] = dynamodb.Table("FF_Orders")
 # SNS topic
 app.config["SNS_TOPIC_ARN"] = os.environ.get(
     "SNS_TOPIC_ARN",
-    "arn:aws:sns:us-east-1:203918855127:furnishfusion_topic"
+    "arn:aws:sns:us-east-1:713881794827:ProjectTopic"
 )
 
 # -------------------------------------------------
